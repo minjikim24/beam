@@ -538,7 +538,7 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 mainClassName = "beam.sim.RunBeam"
 
-def myAvailableRam = (System.getenv("MAXRAM") ?: (project.findProperty('maxRAM') ?: "140"))
+def myAvailableRam = (System.getenv("MAXRAM") ?: (project.findProperty('maxRAM') ?: "8"))
         .toString()
         .replace("g", "")
         .toFloat() // because otherwise 'toInteger' might throw java.lang.NumberFormatException
